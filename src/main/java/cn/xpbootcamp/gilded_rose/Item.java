@@ -53,7 +53,9 @@ public class Item {
                     quality = quality + 1;
                 }
             }
-        } else if (!name.equals(SULFURAS_HAND)) {
+        } else if (name.equals(SULFURAS_HAND)) {
+            // do nothing
+        } else {
             if (quality > 0) {
                 quality = quality - 1;
             }
