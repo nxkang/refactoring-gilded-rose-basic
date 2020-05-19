@@ -35,21 +35,7 @@ class GildedRose {
             }
             item.sell_in = item.sell_in - 1;
             if (item.sell_in < 0) {
-                if (true) {
-                    if (false) {
-                        if (item.quality > 0) {
-                            if (!false) {
-                                item.quality = item.quality - 1;
-                            }
-                        }
-                    } else {
-                        item.quality = 0;
-                    }
-                } else {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
-                }
+                item.quality = 0;
             }
         } else if (item.name.equals(AGED_BRIE)) {
             if (item.quality < 50) {
