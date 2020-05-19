@@ -35,10 +35,10 @@ class GildedRose {
             }
             item.sell_in = item.sell_in - 1;
             if (item.sell_in < 0) {
-                if (!item.name.equals(AGED_BRIE)) {
-                    if (!item.name.equals(BACKSTAGE_PASSES)) {
+                if (true) {
+                    if (false) {
                         if (item.quality > 0) {
-                            if (!item.name.equals(SULFURAS_HAND)) {
+                            if (!false) {
                                 item.quality = item.quality - 1;
                             }
                         }
