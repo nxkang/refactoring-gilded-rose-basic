@@ -25,24 +25,7 @@ public class Item {
 
     void update_item_quality() {
         if (name.equals(BACKSTAGE_PASSES)) {
-            if (quality < 50) {
-                quality = quality + 1;
-                if (sell_in < 11) {
-                    if (quality < 50) {
-                        quality = quality + 1;
-                    }
-                }
-
-                if (sell_in < 6) {
-                    if (quality < 50) {
-                        quality = quality + 1;
-                    }
-                }
-            }
-            sell_in = sell_in - 1;
-            if (sell_in < 0) {
-                quality = 0;
-            }
+            new BackstagePassHandler(this).handle();
         } else if (name.equals(AGED_BRIE)) {
             if (quality < 50) {
                 quality = quality + 1;
