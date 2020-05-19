@@ -37,10 +37,8 @@ class GildedRose {
             if (item.quality < 50) {
                 item.quality = item.quality + 1;
             }
-        } else {
-            if (item.quality > 0 && !item.name.equals(SULFURAS_HAND)) {
-                item.quality = item.quality - 1;
-            }
+        } else if (item.quality > 0 && !item.name.equals(SULFURAS_HAND)) {
+            item.quality = item.quality - 1;
         }
 
         if (!item.name.equals(SULFURAS_HAND)) {
