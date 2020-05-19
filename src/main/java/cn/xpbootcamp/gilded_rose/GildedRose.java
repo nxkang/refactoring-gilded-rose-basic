@@ -18,23 +18,24 @@ class GildedRose {
     }
 
     private void update_item_quality(Item item) {
-        if (item.name.equals(AGED_BRIE) || item.name.equals(BACKSTAGE_PASSES)) {
+        if (item.name.equals(BACKSTAGE_PASSES)) {
             if (item.quality < 50) {
                 item.quality = item.quality + 1;
-
-                if (item.name.equals(BACKSTAGE_PASSES)) {
-                    if (item.sell_in < 11) {
-                        if (item.quality < 50) {
-                            item.quality = item.quality + 1;
-                        }
-                    }
-
-                    if (item.sell_in < 6) {
-                        if (item.quality < 50) {
-                            item.quality = item.quality + 1;
-                        }
+                if (item.sell_in < 11) {
+                    if (item.quality < 50) {
+                        item.quality = item.quality + 1;
                     }
                 }
+
+                if (item.sell_in < 6) {
+                    if (item.quality < 50) {
+                        item.quality = item.quality + 1;
+                    }
+                }
+            }
+        } else if (item.name.equals(AGED_BRIE)) {
+            if (item.quality < 50) {
+                item.quality = item.quality + 1;
             }
         } else {
             if (item.quality > 0 && !item.name.equals(SULFURAS_HAND)) {
