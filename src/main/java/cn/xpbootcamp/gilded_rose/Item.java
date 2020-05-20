@@ -1,5 +1,7 @@
 package cn.xpbootcamp.gilded_rose;
 
+import cn.xpbootcamp.gilded_rose.day_updater.ItemDayUpdater;
+
 public class Item {
 
     public String name;

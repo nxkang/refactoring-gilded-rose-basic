@@ -1,6 +1,8 @@
-package cn.xpbootcamp.gilded_rose;
+package cn.xpbootcamp.gilded_rose.day_updater;
 
-public class BackstagePassDayUpdater implements ItemDayUpdater {
+import cn.xpbootcamp.gilded_rose.Item;
+
+class BackstagePassDayUpdater implements ItemDayUpdater {
 
     private Item item;
 

@@ -1,4 +1,6 @@
-package cn.xpbootcamp.gilded_rose;
+package cn.xpbootcamp.gilded_rose.day_updater;
+
+import cn.xpbootcamp.gilded_rose.Item;
 
 public interface ItemDayUpdater {
 
