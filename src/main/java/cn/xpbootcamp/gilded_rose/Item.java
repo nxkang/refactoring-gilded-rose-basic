@@ -24,14 +24,18 @@ public class Item {
     }
 
     void update_item_quality() {
+        createItemHandler(this).handle();
+    }
+
+    private ItemHandler createItemHandler(Item item){
         if (name.equals(BACKSTAGE_PASSES)) {
-            new BackstagePassHandler(this).handle();
+            return new BackstagePassHandler(item);
         } else if (name.equals(AGED_BRIE)) {
-            new AgedBrieHandler(this).handle();
+            return new AgedBrieHandler(this);
         } else if (name.equals(SULFURAS_HAND)) {
-            new SulfurasHandHandler(this).handle();
+            return new SulfurasHandHandler(this);
         } else {
-            new OrdinaryProductHandler(this).handle();
+            return new OrdinaryProductHandler(this);
         }
     }
 }
