@@ -31,15 +31,7 @@ public class Item {
         } else if (name.equals(SULFURAS_HAND)) {
             new SulfurasHandHandler(this).handle();
         } else {
-            if (quality > 0) {
-                quality = quality - 1;
-            }
-            sell_in = sell_in - 1;
-            if (sell_in < 0) {
-                if (quality > 0) {
-                    quality = quality - 1;
-                }
-            }
+            new OrdinaryProductHandler(this).handle();
         }
     }
 }
