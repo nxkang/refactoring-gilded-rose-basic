@@ -19,7 +19,7 @@ public class Item {
         return this.name + ", " + this.sell_in + ", " + this.quality;
     }
 
-    void update_item_quality() {
+    void updateItemQuality() {
         ItemDayUpdater.createItemHandler(this).handle();
     }
 
