@@ -1,10 +1,10 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class BackstagePassHandler implements ItemHandler {
+public class BackstagePassDayUpdater implements ItemDayUpdater {
 
     private Item item;
 
-    public BackstagePassHandler(Item item) {
+    public BackstagePassDayUpdater(Item item) {
         this.item = item;
     }
 

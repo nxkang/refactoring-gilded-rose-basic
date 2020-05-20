@@ -1,10 +1,10 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class SulfurasHandHandler implements ItemHandler {
+public class SulfurasHandDayUpdater implements ItemDayUpdater {
 
     private Item item;
 
-    public SulfurasHandHandler(Item item) {
+    public SulfurasHandDayUpdater(Item item) {
         this.item = item;
     }
 

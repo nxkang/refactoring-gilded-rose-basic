@@ -1,6 +1,6 @@
 package cn.xpbootcamp.gilded_rose;
 
-public interface ItemHandler {
+public interface ItemDayUpdater {
 
     String AGED_BRIE = "Aged Brie";
     String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
@@ -8,15 +8,15 @@ public interface ItemHandler {
 
     void handle();
 
-    static ItemHandler createItemHandler(Item item){
+    static ItemDayUpdater createItemHandler(Item item){
         if (item.name.equals(BACKSTAGE_PASSES)) {
-            return new BackstagePassHandler(item);
+            return new BackstagePassDayUpdater(item);
         } else if (item.name.equals(AGED_BRIE)) {
-            return new AgedBrieHandler(item);
+            return new AgedBrieDayUpdater(item);
         } else if (item.name.equals(SULFURAS_HAND)) {
-            return new SulfurasHandHandler(item);
+            return new SulfurasHandDayUpdater(item);
         } else {
-            return new OrdinaryProductHandler(item);
+            return new OrdinaryProductDayUpdater(item);
         }
     }
 }

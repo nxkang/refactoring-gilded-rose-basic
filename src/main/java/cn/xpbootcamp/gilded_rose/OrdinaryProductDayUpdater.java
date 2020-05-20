@@ -1,10 +1,10 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class OrdinaryProductHandler implements ItemHandler {
+public class OrdinaryProductDayUpdater implements ItemDayUpdater {
 
     private Item item;
 
-    public OrdinaryProductHandler(Item item) {
+    public OrdinaryProductDayUpdater(Item item) {
         this.item = item;
     }
 

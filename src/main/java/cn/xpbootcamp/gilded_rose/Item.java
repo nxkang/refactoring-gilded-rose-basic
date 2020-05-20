@@ -18,7 +18,7 @@ public class Item {
     }
 
     void update_item_quality() {
-        ItemHandler.createItemHandler(this).handle();
+        ItemDayUpdater.createItemHandler(this).handle();
     }
 
 }

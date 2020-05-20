@@ -1,10 +1,10 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class AgedBrieHandler implements ItemHandler {
+public class AgedBrieDayUpdater implements ItemDayUpdater {
 
     private Item item;
 
-    public AgedBrieHandler(Item item) {
+    public AgedBrieDayUpdater(Item item) {
         this.item = item;
     }
 
