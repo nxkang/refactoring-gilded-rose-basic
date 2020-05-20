@@ -2,14 +2,8 @@ package cn.xpbootcamp.gilded_rose;
 
 public class Item {
 
-    public static final String AGED_BRIE = "Aged Brie";
-    public static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
-    public static final String SULFURAS_HAND = "Sulfuras, Hand of Ragnaros";
-
     public String name;
-
     public int sell_in;
-
     public int quality;
 
     public Item(String name, int sell_in, int quality) {
@@ -24,18 +18,7 @@ public class Item {
     }
 
     void update_item_quality() {
-        createItemHandler(this).handle();
+        ItemHandler.createItemHandler(this).handle();
     }
 
-    private ItemHandler createItemHandler(Item item){
-        if (name.equals(BACKSTAGE_PASSES)) {
-            return new BackstagePassHandler(item);
-        } else if (name.equals(AGED_BRIE)) {
-            return new AgedBrieHandler(this);
-        } else if (name.equals(SULFURAS_HAND)) {
-            return new SulfurasHandHandler(this);
-        } else {
-            return new OrdinaryProductHandler(this);
-        }
-    }
 }
