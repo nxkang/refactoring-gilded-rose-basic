@@ -1,6 +1,6 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class BackstagePassHandler {
+public class BackstagePassHandler implements ItemHandler {
 
     private Item item;
 
@@ -8,6 +8,7 @@ public class BackstagePassHandler {
         this.item = item;
     }
 
+    @Override
     public void handle() {
         if (item.quality < 50) {
             item.quality = item.quality + 1;

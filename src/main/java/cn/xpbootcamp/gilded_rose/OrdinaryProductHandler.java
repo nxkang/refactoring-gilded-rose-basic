@@ -1,6 +1,6 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class OrdinaryProductHandler {
+public class OrdinaryProductHandler implements ItemHandler {
 
     private Item item;
 
@@ -8,6 +8,7 @@ public class OrdinaryProductHandler {
         this.item = item;
     }
 
+    @Override
     public void handle() {
         if (item.quality > 0) {
             item.quality = item.quality - 1;

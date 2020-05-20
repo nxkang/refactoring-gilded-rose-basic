@@ -1,6 +1,6 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class AgedBrieHandler {
+public class AgedBrieHandler implements ItemHandler {
 
     private Item item;
 
@@ -8,6 +8,7 @@ public class AgedBrieHandler {
         this.item = item;
     }
 
+    @Override
     public void handle() {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
