@@ -10,7 +10,7 @@ public interface ItemDayUpdater {
 
     void handle();
 
-    static ItemDayUpdater createItemHandler(Item item){
+    static ItemDayUpdater createItemDayUpdater(Item item){
         if (item.name.equals(BACKSTAGE_PASSES)) {
             return new BackstagePassDayUpdater(item);
         } else if (item.name.equals(AGED_BRIE)) {

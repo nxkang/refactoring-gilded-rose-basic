@@ -14,7 +14,7 @@ class GildedRose {
 
     public void update_quality() {
         Arrays.stream(items).forEach(item -> {
-            ItemDayUpdater.createItemHandler(item).handle();
+            ItemDayUpdater.createItemDayUpdater(item).handle();
         });
     }
 }
