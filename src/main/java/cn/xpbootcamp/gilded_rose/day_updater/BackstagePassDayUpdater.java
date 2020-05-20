@@ -14,20 +14,20 @@ class BackstagePassDayUpdater implements ItemDayUpdater {
     public void handle() {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
-            if (item.sell_in < 11) {
+            if (item.sellIn < 11) {
                 if (item.quality < 50) {
                     item.quality = item.quality + 1;
                 }
             }
 
-            if (item.sell_in < 6) {
+            if (item.sellIn < 6) {
                 if (item.quality < 50) {
                     item.quality = item.quality + 1;
                 }
             }
         }
-        item.sell_in = item.sell_in - 1;
-        if (item.sell_in < 0) {
+        item.sellIn = item.sellIn - 1;
+        if (item.sellIn < 0) {
             item.quality = 0;
         }
     }
