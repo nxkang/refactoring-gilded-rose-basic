@@ -1,5 +1,7 @@
 package cn.xpbootcamp.gilded_rose;
 
+import java.util.Arrays;
+
 class GildedRose {
 
     Item[] items;
@@ -9,9 +11,7 @@ class GildedRose {
     }
 
     public void update_quality() {
-        for (int i = 0; i < items.length; i++) {
-            items[i].update_item_quality();
-        }
+        Arrays.stream(items).forEach(Item::update_item_quality);
     }
 
 }
