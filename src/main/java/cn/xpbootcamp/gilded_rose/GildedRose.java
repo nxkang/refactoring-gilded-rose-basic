@@ -1,5 +1,7 @@
 package cn.xpbootcamp.gilded_rose;
 
+import cn.xpbootcamp.gilded_rose.day_updater.ItemDayUpdater;
+
 import java.util.Arrays;
 
 class GildedRose {
@@ -11,7 +13,8 @@ class GildedRose {
     }
 
     public void update_quality() {
-        Arrays.stream(items).forEach(Item::updateItemQuality);
+        Arrays.stream(items).forEach(item -> {
+            ItemDayUpdater.createItemHandler(item).handle();
+        });
     }
-
 }

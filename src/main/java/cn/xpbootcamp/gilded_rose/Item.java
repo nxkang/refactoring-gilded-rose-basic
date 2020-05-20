@@ -1,6 +1,5 @@
 package cn.xpbootcamp.gilded_rose;
 
-import cn.xpbootcamp.gilded_rose.day_updater.ItemDayUpdater;
 
 public class Item {
 
@@ -17,10 +16,6 @@ public class Item {
     @Override
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
-
-    void updateItemQuality() {
-        ItemDayUpdater.createItemHandler(this).handle();
     }
 
 }
