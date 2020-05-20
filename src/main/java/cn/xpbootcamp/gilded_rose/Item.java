@@ -27,15 +27,7 @@ public class Item {
         if (name.equals(BACKSTAGE_PASSES)) {
             new BackstagePassHandler(this).handle();
         } else if (name.equals(AGED_BRIE)) {
-            if (quality < 50) {
-                quality = quality + 1;
-            }
-            sell_in = sell_in - 1;
-            if (sell_in < 0) {
-                if (quality < 50) {
-                    quality = quality + 1;
-                }
-            }
+            new AgedBrieHandler(this).handle();
         } else if (name.equals(SULFURAS_HAND)) {
             // do nothing
         } else {
