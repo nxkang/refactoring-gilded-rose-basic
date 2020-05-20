@@ -29,7 +29,7 @@ public class Item {
         } else if (name.equals(AGED_BRIE)) {
             new AgedBrieHandler(this).handle();
         } else if (name.equals(SULFURAS_HAND)) {
-            // do nothing
+            new SulfurasHandHandler(this).handle();
         } else {
             if (quality > 0) {
                 quality = quality - 1;
